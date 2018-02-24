@@ -10,6 +10,9 @@ before_script:
   $TRAVIS_BUILD_DIR/pom.xml;    fi
 - if [[ -e $HOME/CACHE/classpathFile ]]; then cp $HOME/CACHE/classpathFile /tmp/;
   fi
+cache:
+  directories:
+  - $HOME/CACHE
 env:
 - TESTFOLDER=batch
 - TESTFOLDER=cdi
